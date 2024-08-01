@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('F:/Secreto/imagenes/pexels-dreamypixel-547115.jpg') no-repeat center center fixed;
+    background: url('imagenes/pexels-dreamypixel-547115.jpg') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
 }
