@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Wittgenstein", serif;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(227, 155, 236); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255); /* creates padding around scroll thumb */
+}
+
+body {
+  margin-left: 80px;
+  margin-top: 80px;
+  transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+#menu {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #7a6b68;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+
+.icon_menu {
+  width: 50px;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(10px);
+  font-size: 20px;
+}
+
+.icon_menu i {
+  cursor: pointer;
+}
+
+.menu_side {
+  width: 80px;
+  height: 100%;
+  background-color: #7a6b68;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 18px;
+  z-index: 300;
+  overflow: hidden;
+  border-right: 20px solid #7a6b68;
+  overflow-y: scroll;
+  transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.menu_side::-webkit-scrollbar {
+  display: none;
+}
+
+.menu_side {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.name_page {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  margin-top: -2px;
+  font-size: 20px;
+}
+
+.name_page h4 {
+  font-family: "Roboto", sans-serif;
+  padding-left: 5px;
+}
+
+.name_page i {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.options_menu {
+  padding: 20px 30px;
+  position: absolute;
+  top: 80px;
+}
+
+.options_menu a {
+  color: rgb(250, 247, 247);
+  cursor: default;
+  display: block;
+  position: relative;
+  transition: color 300ms;
+  width: 200px;
+}
+
+.options_menu .option {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.options_menu .option:hover {
+  color: darkcyan;
+}
+
+.options_menu .option i {
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.options_menu .option h4 {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+a.selected {
+  color: white;
+}
+
+.selected::before {
+  content: "";
+  width: 3px;
+  height: 80%;
+  background: white;
+  position: absolute;
+  top: 10%;
+  left: -30px;
+}
+
+/*Clases para JavaScript*/
+
+.body_move {
+  margin-left: 250px;
+}
+
+.menu_side_move {
+  width: 250px;
+}
+
+@media screen and (max-width: 760px) {
+  .body_move {
+    margin-left: 0px;
+  }
+
+  .menu_side_move {
+    width: 80px;
+    left: -80px;
+  }
+}
+
+.inicio {
+  width: 100%;
+  padding: 20px;
+  background: url("imagenes/pexels-eberhardgross-1287142.jpg") no-repeat center
+    center fixed;
+  text-align: center;
+}
+
+.inicio h1{
+  color: white;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.cartas {
+  width: 100%;
+  padding: 20px;
+  background-color: #c3aaa5;
+}
+
+.felizcumple{
+  background-color: rgba(255, 255, 255, 0.747);
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.diario {
+  width: 100%;
+  padding: 20px;
+  background: url("imagenes/corcho-ecologico.jpg");
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dosocho {
+  background-color: rgb(221, 110, 203);
+  width: 700px;
+  height: fit-content;
+  padding: 50px;
+  margin-top: 70px;
+  margin-left: 100px;
+  box-shadow: 6.5px 6px 5px rgb(37, 37, 37);
+  text-align: justify;
+}
+
+.dosnueve {
+  background-color: rgb(127, 255, 159);
+  width: 600px;
+  height: fit-content;
+  padding: 50px;
+  margin-top: 230px;
+  margin-left: 100px;
+  box-shadow: 6.5px 6px 5px rgb(37, 37, 37);
+  text-align: justify;
+}
+
+.treinta {
+  background-color: rgb(127, 204, 255);
+  width: 700px;
+  height: fit-content;
+  padding: 50px;
+  margin-top: 120px;
+  margin-left: 100px;
+  box-shadow: 6.5px 6px 5px rgb(37, 37, 37);
+  text-align: justify;
+}
+
+.ochosiete {
+  background-color: aquamarine;
+  width: 500px;
+  height: fit-content;
+  padding: 50px;
+  margin-top: 70px;
+  margin-left: 40px;
+  box-shadow: 6.5px 6px 5px rgb(37, 37, 37);
+  text-align: justify;
+}
+
+.nuevesiete {
+  background-color: rgb(255, 146, 127);
+  width: 500px;
+  height: fit-content;
+  padding: 50px;
+  margin-top: 70px;
+  margin-left: 40px;
+  box-shadow: 6.5px 6px 5px rgb(37, 37, 37);
+  text-align: justify;
+}
+
+.diezsiete {
+  background-color: rgb(161, 127, 255);
+  width: 500px;
+  height: fit-content;
+  padding: 50px;
+  margin-top: 70px;
+  margin-left: 40px;
+  box-shadow: 6.5px 6px 5px rgb(37, 37, 37);
+  text-align: justify;
+}
+
+.playlist {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffc2bb;
+  text-align: center;
+  vertical-align: top;
+}
+
+.youtube {
+  width: 50%;
+  float: left;
+
+}
+
+.youtube i {
+  font-size: 60px;
+  color: white;
+  padding-right: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+.recuerdos{
+  background-color: rgb(41, 41, 41);
+  width: 45%;
+  height: 500px;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-left: 40px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.recuerdos a{
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+
+.recuerdos a:hover{
+  color: #c3aaa5;
+  cursor: pointer;
+}
+
+.spotify {
+  width: 50%;
+  display: inline-block;
+}
+
+.spotify i {
+  font-size: 60px;
+  color: white;
+  padding-left: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.spotify iframe {
+  margin: 25px;
+}
+
+.listas {
+  width: 100%;
+  padding: 20px;
+  background-color: #d76483;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente (si la altura es fija) */
+}
+
+
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Estilos del menú lateral */
+.sidebar {
+  background-color: #fff4f1; /* Fondo del menú lateral - un rosa muy claro */
+  padding: 20px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  width: 300px;
+}
+
+.sidebar h2 {
+  color: #d98268; /* Color del título del menú lateral */
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-align: center;
+}
+
+#categoryMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de las categorías en el menú lateral */
+#categoryMenu li {
+  background-color: #ffeae1; /* Fondo de las categorías en el menú */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  color: #5c4033; /* Color del texto en el menú */
+  display: flex; /* Usar Flexbox para alinear el contenido */
+  justify-content: space-between; /* Espacio entre el nombre y el botón */
+  align-items: center; /* Alinear verticalmente en el centro */
+}
+
+#categoryMenu li:hover {
+  background-color: #fbd5ca; /* Fondo en hover de las categorías */
+}
+
+#categoryMenu .deleteCategoryBtn {
+  background-color: #f8d7da; /* Rosa claro */
+  border: 1px solid #f5c6cb; /* Marrón claro */
+  color: #721c24; /* Color del texto (marrón oscuro) */
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#categoryMenu .deleteCategoryBtn i {
+  color: #721c24; /* Color del ícono (marrón oscuro) */
+}
+
+#categoryMenu .deleteCategoryBtn:hover {
+  background-color: #f5c6cb; /* Rosa más oscuro */
+  border-color: #f1b0b7; /* Marrón más claro */
+}
+
+
+/* Estilos del contenedor de tareas */
+.todo-container {
+  background: #fff4f1; /* Fondo del contenedor - un rosa muy claro */
+  padding: 20px;
+  border-radius: 15px; /* Contenedor redondeado */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border: 2px solid #e6b8a2; /* Borde del contenedor - marrón claro */
+}
+
+/* Estilos de los títulos */
+h1, h2 {
+  color: #d98268; /* Color de los títulos - un tono de rosa más oscuro */
+  margin-bottom: 20px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* Estilos del input de categoría y tarea */
+.category-section,
+.category-select-section {
+  margin-bottom: 15px;
+}
+
+#categoryInput,
+#taskInput {
+  width: calc(100% - 22px);
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #e6b8a2; /* Borde de los inputs - marrón claro */
+  border-radius: 20px; /* Inputs redondeados */
+  background-color: #fceee6; /* Fondo de los inputs - rosa muy claro */
+  color: #5c4033; /* Color del texto de los inputs - marrón oscuro */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de los botones de añadir */
+#addCategoryBtn,
+#addTaskBtn {
+  padding: 10px 25px;
+  border: none;
+  background-color: #d98268; /* Fondo de los botones - rosa más oscuro */
+  color: white;
+  border-radius: 20px; /* Botones redondeados */
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#addCategoryBtn:hover,
+#addTaskBtn:hover {
+  background-color: #b76b58; /* Hover de los botones - marrón rosado */
+  transform: scale(1.05); /* Efecto de escala en hover */
+}
+
+/* Estilos del selector de categoría */
+#categorySelect {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6b8a2; /* Borde del selector - marrón claro */
+  border-radius: 20px; /* Selector redondeado */
+  margin-bottom: 10px;
+  background-color: #fceee6; /* Fondo del selector - rosa muy claro */
+  color: #5c4033; /* Color del texto del selector - marrón oscuro */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  appearance: none; /* Ocultar la flecha predeterminada */
+}
+
+#categorySelect:hover,
+#categorySelect:focus {
+  background-color: #fbd5ca; /* Fondo del selector cuando se coloca el ratón encima o se selecciona - un tono más oscuro de rosa */
+  border-color: #d98268; /* Cambiar el color del borde en hover/focus */
+}
+
+#categorySelect option {
+  background-color: #fff4f1; /* Fondo de las opciones - rosa muy claro */
+  color: #5c4033; /* Color del texto de las opciones - marrón oscuro */
+  padding: 5px;
+}
+
+#categorySelect option:hover {
+  background-color: #fbd5ca; /* Fondo de las opciones en hover - rosa más oscuro */
+  color: #5c4033; /* Mantener el color del texto en hover */
+}
+
+/* Estilos de las listas de tareas */
+#taskList,
+#completedTaskList {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos de las tareas en la lista */
+#taskList li,
+#completedTaskList li {
+  background: #ffeae1; /* Fondo de las tareas - rosa claro */
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 15px; /* Tareas redondeadas */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e6b8a2; /* Borde de las tareas - marrón claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taskText {
+  flex-grow: 1;
+  color: #5c4033; /* Color del texto de las tareas - marrón oscuro */
+}
+
+.taskCategory {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #a67c6b; /* Color del texto de la categoría - marrón claro */
+}
+
+.completed .taskText {
+  text-decoration: line-through;
+  color: #a67c6b; /* Color del texto de tareas completadas - marrón claro */
+}
+
+/* Estilo para los botones de eliminación de tareas */
+button.deleteBtn {
+  background-color: #f8d7da; /* Rosa claro */
+  border: 1px solid #f5c6cb; /* Marrón claro */
+  color: #721c24; /* Color del texto (marrón oscuro) */
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para los botones de eliminación de categorías */
+button.deleteCategoryBtn {
+  background-color: #f8d7da; /* Rosa claro */
+  border: 1px solid #f5c6cb; /* Marrón claro */
+  color: #721c24; /* Color del texto (marrón oscuro) */
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para los íconos dentro de los botones */
+button.deleteBtn i, button.deleteCategoryBtn i {
+  color: #721c24; /* Color del ícono (marrón oscuro) */
+}
+
+/* Cambiar el color del botón cuando el mouse está sobre él */
+button.deleteBtn:hover, button.deleteCategoryBtn:hover {
+  background-color: #f5c6cb; /* Rosa más oscuro */
+  border-color: #f1b0b7; /* Marrón más claro */
+}
+
+/* Cambiar el color del botón cuando está deshabilitado */
+button.deleteBtn:disabled, button.deleteCategoryBtn:disabled {
+  background-color: #e2e3e5; /* Gris claro */
+  border-color: #d6d6d6; /* Gris más claro */
+  color: #6c757d; /* Gris oscuro */
+  cursor: not-allowed;
+}
+
+/* Estilo básico del checkbox */
+input[type="checkbox"] {
+  appearance: none; /* Ocultar el checkbox por defecto */
+  -webkit-appearance: none; /* Ocultar en WebKit browsers */
+  background-color: #ffeae1; /* Fondo del checkbox */
+  border: 2px solid #e6b8a2; /* Borde del checkbox */
+  border-radius: 4px; /* Bordes redondeados */
+  width: 20px; /* Tamaño del checkbox */
+  height: 20px; /* Tamaño del checkbox */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el checkbox */
+  position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+  vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+
+/* Estilo cuando el checkbox está marcado */
+input[type="checkbox"]:checked {
+  background-color: #d98268; /* Fondo cuando está marcado */
+  border-color: #d98268; /* Borde cuando está marcado */
+}
+
+/* Estilo del chequeo dentro del checkbox */
+input[type="checkbox"]:checked::before {
+  content: "\2714"; /* Marcador de verificación */
+  color: white; /* Color del marcador */
+  font-size: 14px; /* Tamaño del marcador */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajustar el centro del marcador */
+}
+
+/* Estilo al pasar el mouse sobre el checkbox */
+input[type="checkbox"]:hover {
+  border-color: #d98268; /* Cambiar borde en hover */
+  background-color: #ffeae1; /* Fondo en hover */
+}
+
+/* Estilo para el label del checkbox (opcional) */
+input[type="checkbox"] + label {
+  color: #5c4033; /* Color del texto del label */
+  margin-left: 8px; /* Espacio entre el checkbox y el texto */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el label */
+}
