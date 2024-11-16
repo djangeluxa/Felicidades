@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Destinatario
-    $destinatario = "tu_correo@ejemplo.com"; // Cambia esto por tu dirección de correo
+    $destinatario = "angie.cafe6@gmail.com"; // Cambia esto por tu dirección de correo
 
     // Asunto del correo
     $asunto = "Contenido del cuadro de texto";
@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mensaje = "El contenido enviado es:\n\n" . $contenido;
 
     // Cabeceras del correo
-    $headers = "From: webmaster@tu_dominio.com\r\n"; // Cambia esto por tu dirección de correo
-    $headers .= "Reply-To: webmaster@tu_dominio.com\r\n"; // Cambia esto por tu dirección de correo
+    $headers = "From: angie.cafe6@gmail.com\r\n"; // Cambia esto por tu dirección de correo
+    $headers .= "Reply-To: angie.cafe6@gmail.com\r\n"; // Cambia esto por tu dirección de correo
 
     // Enviar el correo
     if (mail($destinatario, $asunto, $mensaje, $headers)) {
